@@ -1,0 +1,21 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.nav-wrap {
+	background-color: #FFF;
+	border-bottom: 2px solid #ff9376;
+	height: 90px;	
+}
+
+.nav-wrap li {
+
+}
+
+
+
+#cta {
+	background-color: #6eb6a1;
+	height: 400px;
+	padding: 50px 0;
+}
