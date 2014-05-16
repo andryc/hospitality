@@ -1,21 +1,119 @@
 body {
-	font-family: 'Open Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
 }
 
 .nav-wrap {
-	background-color: #FFF;
 	border-bottom: 2px solid #ff9376;
 	height: 90px;	
 }
 
-.nav-wrap li {
-
+nav ul { 
+    height: 90px; 
 }
 
+nav li {
+	display: inline;
+}
 
+nav a, nav li a {
+	text-align: center;  
+    text-decoration: none;  
+    line-height: 90px;
+}
+
+nav li a {
+	padding: 20px;
+	color: #000;
+}
+
+nav li a:hover {
+	text-decoration: none;
+	color: #ff9376;
+}
+
+nav li a.active {
+	text-decoration: none;
+	color: #ff9376;
+}
 
 #cta {
 	background-color: #6eb6a1;
 	height: 400px;
 	padding: 50px 0;
 }
+
+#cta-left p {
+	color: #FFF;
+}
+
+.btn-cta {
+	display: inline-block;
+	width: 100px;
+	height:40px;
+    background-color: #ff9376;
+    color: #FFF;
+    text-align: center;
+}
+
+a.btn-cta {
+	text-decoration: none;
+	line-height: 40px;
+}
+
+a.btn-cta:hover {
+	color: #FFF;
+	
+    background: -webkit-linear-gradient(#ffb19c, #ff9376);
+	background: -o-linear-gradient(#ffb19c, #ff9376);
+	background: -moz-linear-gradient(#ffb19c, #ff9376);
+	background: linear-gradient(#ffb19c, #ff9376);
+}
+
+#functions {
+	height: 400px;
+	padding: 50px 0;
+}
+
+footer {
+	border-top: 2px solid #ff9376;
+	height: 70px;
+	text-align: center;
+	line-height: 70px;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.icon-bar{
+		background-color: #ff9376;
+	}
+
+	nav ul {
+		padding: 0;
+	}
+
+	nav li {
+		display: block;
+		text-align: center;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+	
+}
+
