@@ -49,7 +49,7 @@
 			$_SESSION['patient'] = $u->CheckPatient;
 			$_SESSION['id'] = $uid;
 			if ($_SESSION['patient'] == "true") {
-				header('Location: activity.php');
+				header('Location: mood.php');
 			} elseif ($_SESSION['patient'] == "false") {
 				header('Location: visitor.php');
 			}

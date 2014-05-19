@@ -9,12 +9,15 @@
 	
 ?>
 
-<nav class="clearfix">  
-    <ul class="clearfix">  
-        <li><a href="activities.php">Activities</a></li>  
-        <li><a href="mood.php">Mood</a></li>  
-        <li><a href="visits.php">Visits</a></li> 
-        <li><a href="logout.php">Logout</a></li>    
-    </ul>  
-    <a href="#" id="pull">Menu</a>  
+<nav class="nav-wrap clearfix">
+    <div class="container">
+
+        <ul class="navbar-right clearfix">
+            <li><a href="mood.php">Mood</a></li>  
+            <li><a href="activities.php">Activities</a></li>  
+            <li><a href="visits.php">Visits</a></li> 
+            <li><a href="logout.php">Logout</a></li>    
+        </ul>  
+        <a href="#" id="pull">Menu</a>
+    </div>  
 </nav>  

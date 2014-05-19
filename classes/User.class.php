@@ -10,7 +10,7 @@
 		private $m_sPass;
 		private $m_sPassCheck;
 		private $m_bPatient;
-		public $errors = array();
+		public $errors = [];
 
 		public function __SET($p_sProperty, $p_vValue) {
 			switch($p_sProperty) {
@@ -174,7 +174,7 @@
 		public function getId() {
 			$db = new Db();
 			$sql = "SELECT user_id FROM user_tbl
-					WHERE user_email = '$this->m_sEmail'";
+					WHERE user_email = '" . $db->conn->real_escape_string($this->m_sEmail) . "'";
 			
 			$result = $db->conn->query($sql);
 			$row = $result->fetch_assoc();
@@ -185,7 +185,7 @@
 		public function getUserInfo($id) {
 			$db = new Db();
 			$sql = "SELECT * FROM user_tbl
-					WHERE user_id = '$id'";
+					WHERE user_id = '" . $db->conn->real_escape_string($id) . "'";
 			
 			$result = $db->conn->query($sql);
 			$row = $result->fetch_assoc();

@@ -22,7 +22,7 @@
 			
 			if ($u->Login() == true) {
 				$_SESSION['patient'] = "true";
-				header('Location: activities.php');
+				header('Location: mood.php');
 			} elseif ($u->Login() == false) {
 				$_SESSION['patient'] = "false";
 				header('Location: visitor.php');

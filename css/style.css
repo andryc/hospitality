@@ -1,7 +1,7 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 }
-
+/* custom nav css */
 .nav-wrap {
 	border-bottom: 2px solid #ff9376;
 	height: 90px;	
@@ -39,7 +39,7 @@ nav li a.active {
 nav a#pull {  
     display: none;  
 }     
-
+/* home css */
 #cta {
 	background-color: #6eb6a1;
 	height: 400px;
@@ -104,10 +104,6 @@ a.btn-cta:hover {
 
 .funct-text h3 {
 	font-weight: 600;
-} 
-
-form p {
-	padding: 5px;
 }
 
 footer {
@@ -120,6 +116,18 @@ footer p {
 	text-align: center;
 	line-height: 70px;
 }
+/* login/register css */
+form p {
+	padding: 5px;
+}
+
+textarea {
+	resize: none;
+}
+/* mood css */
+span.highlight {
+	color: #6eb6a1;
+}
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
@@ -128,11 +136,33 @@ footer p {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-
+	nav.nav-wrap {   
+        height: auto;  
+    }  
+    nav ul {  
+        width: 100%;  
+        display: block;  
+        height: auto;  
+    }  
+    nav li {  
+        width: 50%;  
+        float: left;  
+        position: relative;  
+    }  
+    nav li  {  
+        border-bottom: 1px solid #6eb6a1;  
+        border-right: 1px solid #6eb6a1;
+    }  
+    nav a {  
+        text-align: left;  
+        width: 100%;  
+        text-indent: 25px;  
+    }  
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+
 	.navbar-toggle {
 		border: 2px solid #ff9376;
 	}
