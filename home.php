@@ -67,9 +67,7 @@
     </div>
   </div>
 
-  <footer>
-    <p>&copy;2013-2014 Hospitality. An IMD School Project</p>
-  </footer>
+  <?php include_once('includes/incl.footer.php'); ?>  
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
