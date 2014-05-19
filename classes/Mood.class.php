@@ -62,9 +62,18 @@
 			$result = $db->conn->query($existSql);
 			if ($result->num_rows == 0) {
 				$db->conn->query($insertSql);
+				return false;
 			} else {
 				$db->conn->query($updateSql);
+				return true;
 			}
+		}
+
+		public function GetMood($uid) {
+			$db = new Db();
+			$sql = "SELECT * FROM mood_tbl WHERE fk_user_id = '$uid'";
+			$result = $db->conn->query($sql);
+			return $result;
 		}
 	}
 	

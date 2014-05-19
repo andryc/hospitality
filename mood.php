@@ -3,9 +3,8 @@
 	include_once('classes/Mood.class.php');
 	$u_name = $_SESSION['name'];
 	$uid = $_SESSION['id'];
-
+	$m = new Mood();
 	if (isset($_POST['mood-btn'])) {
-		$m = new Mood();
 		$m->UserId = $uid;
 		$m->General = $_POST['general'];
 		$m->Feeling = $_POST['feeling'];
@@ -21,8 +20,16 @@
 <body>
 <?php include_once('includes/incl.nav-funct.php'); ?>
 <div class="container">
+	<div class="content-wrap">
 	<h2>Mood</h2>
-	<p>Welcome <span class="highlight"><?php echo $u_name; ?></span>, how are you feeling today?</p>
+	<?php
+		$row = $m->GetMood($uid);
+		$mood = $row->fetch_assoc();
+		if ($row->num_rows > 0) { ?>
+			<p>Welcome <a href="visits.php" class="highlight"><?php echo $u_name; ?></a>, You are feeling <span class="highlight"><?php echo $mood['mood_feeling'] ?></span></p>
+	<?php } else { ?>
+			<p>Welcome <a href="visits.php"><?php echo $u_name; ?></a>, how are you feeling today?</p>
+	<?php } ?>
 	<form role="form" method="post">
 		<div class="form-group">
 			<label for="general">In general</label>
@@ -38,6 +45,7 @@
 		</div>
 		<input type="submit" class="btn btn-default" name="mood-btn" value="Mood">
 	</form>
+	</div>
 </div>
 <?php include_once('includes/incl.footer.php'); ?>	
 </body>
