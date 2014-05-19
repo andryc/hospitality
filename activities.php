@@ -2,14 +2,17 @@
 	session_start();
 	include_once('classes/Activity.class.php');
 	$uid = $_SESSION['id'];
+	$date = date('F j, Y, G:i');
+	$a = new Activity();
 
 	if (isset($_POST['activ-btn'])) {
-		$a = new Activity();
 		$a->Title = $_POST['title'];
 		$a->Text = $_POST['text'];
+		$a->Date = $date;
 		$a->UserId = $uid;
 		$a->SaveActivity();
 	}
+	$allA = $a->GetActivities($uid);
 
 ?><!doctype html>
 <html lang="en">
@@ -33,6 +36,20 @@
 		</div>
 		<input type="submit" class="btn btn-default" name="activ-btn" value="Save activity">
 	</form>
+
+	<?php if ($allA->num_rows > 0) { 
+		foreach ($allA as $activ) { ?>
+			<article>
+				<h3><?php echo htmlspecialchars($activ['activity_title']); ?> <small><?php echo $activ['activity_date'] ?></small></h3>
+				<p><?php echo $activ['activity_text'] ?></p>
+
+			</article>	
+	<?php } ?>
+		
+	<?php } else { ?>
+		<p>Share some of your activities</p>
+	<?php } ?>
+
 </div>
 <?php include_once('includes/incl.footer.php'); ?>
 </body>
