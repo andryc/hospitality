@@ -42,7 +42,7 @@ nav li a.active {
 	padding: 50px 0;
 }
 
-#cta-left p {
+#cta-right p {
 	color: #FFF;
 }
 
@@ -74,9 +74,40 @@ a.btn-cta:hover {
 	padding: 50px 0;
 }
 
+.funct-wrap {
+	width: 360px;
+	min-height: 200px;
+	margin-right: 20px;
+	background-color: #edffeb;
+}
+
+#functions section.funct-wrap:last-child {
+	margin-right: 0;
+}
+
+.funct-ico {
+	margin: 10px 10px 10px 0;
+}
+
+.funct-img {
+	width: 50px;
+	height: 50px;
+}
+
+.funct-text {
+	margin-left: 70px;
+}
+
+.funct-text h3 {
+	font-weight: 600;
+}
+
 footer {
 	border-top: 2px solid #ff9376;
 	height: 70px;
+}
+
+footer p {
 	text-align: center;
 	line-height: 70px;
 }
@@ -93,11 +124,15 @@ footer {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	.navbar-toggle {
+		border: 2px solid #ff9376;
+	}
 	.icon-bar{
 		background-color: #ff9376;
 	}
 
 	nav ul {
+		display: block;
 		padding: 0;
 	}
 

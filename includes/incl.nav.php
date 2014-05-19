@@ -6,7 +6,7 @@
 
 ?>
 
-<nav class="navbar nav-wrap" role="navigation">
+<nav class="nav-wrap" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#drop-nav">

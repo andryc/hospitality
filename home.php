@@ -13,7 +13,7 @@
         <img src="http://dummyimage.com/400x200/000/fff" alt="hospitality responsive">
       </section>
 
-      <section id="cta-left" class="col-md-6">
+      <section id="cta-right" class="col-md-6">
         <p>
           <strong>Hospitality</strong>
           <br>
@@ -25,22 +25,44 @@
     </div>
   </div>
  
-  <div class="container-fluid">
-    <div class="row">
-      <div id="functions">
-        <div class="container">
-          <section class="col-md-4 function-wrap">
-            <img src="http://dummyimage.com/300x200/000/fff" alt="hospitality responsive">
-          </section>
+  <div class="container">
+    <div class="center-block">
+      <div id="functions" class="row">
+        <section class="col-md-4 funct-wrap">
+          <div class="funct-ico pull-left">
+            <img class="funct-img" src="img/activity-vb.jpg" alt="">
+          </div>
+          <div class="funct-text">
+            <p>
+              <h3>Activities</h3>
+              Be active. Write to your visitors what you are experiencing during your stay. Share your story so others can learn from it.
+            </p>
+          </div>
+        </section>
 
-          <section class="col-md-4 function-wrap">
-            <img src="http://dummyimage.com/300x200/000/fff" alt="hospitality responsive">
-          </section>
+        <section class="col-md-4 funct-wrap">
+          <div class="funct-ico pull-left">
+            <img class="funct-img" src="img/mood-vb.png" alt="">
+          </div>
+          <div class="funct-text">
+            <p>
+              <h3>Status</h3>
+              Having a bad day? Let your friends and family know. They can't help you if they don't know. Don't stop there,  
+            </p>
+          </div>
+        </section>
 
-          <section class="col-md-4 function-wrap">
-            <img src="http://dummyimage.com/300x200/000/fff" alt="hospitality responsive">
-          </section>
-        </div>
+        <section class="col-md-4 funct-wrap">
+          <div class="funct-ico pull-left">
+            <img class="funct-img" src="img/visitor-vb.png" alt="">
+          </div>
+          <div class="funct-text">
+            <p>
+              <h3>Visitors</h3>
+              
+            </p>
+          </div>
+        </section>
       </div>
     </div>
   </div>
