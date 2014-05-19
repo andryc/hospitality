@@ -26,7 +26,7 @@
 				if(!empty($p_vValue)) {
 					$this->m_sSurname = $p_vValue;
 				} else {
-					$this->errors["errorSurame"] = "Fill in your surname";
+					$this->errors["errorSurname"] = "Fill in your surname";
 				}
 				break;
 				
@@ -136,9 +136,6 @@
 							)
 						";
 				$db->conn->query($sql);
-				$_SESSION['email'] = $this->m_sEmail;
-				$_SESSION['name'] = $this->m_sName;
-				$_SESSION['surname'] = $this->m_sSurname;
 			} else {
 				$this->errors['errorEmailCheck'] = "Sorry this e-mail adress already has an account.";
 			}
@@ -162,16 +159,37 @@
 
 			if($result->num_rows == 1) {
 				if ($checkPatient->num_rows == 1) {
-					$patient = false;
+					$patient = true;
 					return $patient;
 				} else {
-					$patient = true;
+					$patient = false;
 					return $patient;
 				}
 
 			} else {
 				$this->errors['errorLogin'] = "Sorry, your email or password is incorrect";
 			}
+		}
+
+		public function getId() {
+			$db = new Db();
+			$sql = "SELECT user_id FROM user_tbl
+					WHERE user_email = '$this->m_sEmail'";
+			
+			$result = $db->conn->query($sql);
+			$row = $result->fetch_assoc();
+			$id = $row['user_id'];
+			return $id;
+		}
+
+		public function getUserInfo($id) {
+			$db = new Db();
+			$sql = "SELECT * FROM user_tbl
+					WHERE user_id = '$id'";
+			
+			$result = $db->conn->query($sql);
+			$row = $result->fetch_assoc();
+			return $row;
 		}
 	}
 
