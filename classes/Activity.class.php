@@ -71,7 +71,16 @@
 					WHERE fk_user_id = '$uid'
 					ORDER BY activity_id DESC";
 			$result = $db->conn->query($sql);
-			return $result; 
+			return $result;
+		}
+
+		public function GetLatestActivity($uid) {
+			$db = new Db();
+			$sql = "SELECT * FROM activity_tbl WHERE fk_user_id = '$uid' 
+					ORDER BY activity_id DESC LIMIT 1";
+			$result = $db->conn->query($sql);
+			$data = $result->fetch_assoc();
+			return $data;
 		}
 
 	}

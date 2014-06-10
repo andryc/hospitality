@@ -9,66 +9,77 @@
 <?php include_once('includes/incl.nav.php'); ?>
   <div id="cta">
     <div class="container">
-      <section id="cta-left" class="col-md-6">
-        <img src="http://dummyimage.com/400x200/000/fff" alt="hospitality responsive">
-      </section>
+      <div class="row">
+        <div class="col-md-6">
+          <section id="cta-left">
+            <p>
+              <span>Welcome to Hospitality</span> Being commited for a longer period of time? Don't want to lose touch with your friends and family?
+              <br>
+              Try out <strong>hospitality</strong>.
+            </p>
+          </section>
+        </div>
 
-      <section id="cta-right" class="col-md-6">
-        <p>
-          <strong>Hospitality</strong>
-          <br>
-          <a href="login.php" class="btn-cta" role="button">Login</a>
-          or
-          <a href="register.php" class="btn-cta" role="button">Register</a>
-        </p>
-      </section>
+        <div class="col-md-6">
+          <section id="cta-right"> 
+            <p>
+              Are you interested in what <strong>Hospitality</strong> has to offer you? Don't hesitate an join today!
+              <br>
+            </p>
+              <a href="login.php" class="btn-cta" role="button">Login</a>
+                or
+              <a href="register.php" class="btn-cta" role="button">Register</a>
+          </section>
+        </div>
+      </div>
     </div>
   </div>
  
   <div class="container">
-    <div class="center-block">
-      <div id="functions" class="row">
-        <section class="col-md-4 funct-wrap">
-          <div class="funct-ico pull-left">
-            <img class="funct-img" src="img/activity-vb.jpg" alt="">
-          </div>
-          <div class="funct-text">
-            <p>
+    <div class="row">
+      <div id="functions">
+        <div class="col-md-4">
+          <section class="funct-wrap">
+            <div class="funct-ico pull-left">
+              <img class="funct-img" src="img/activity-icon.png" alt="activity icon">
+            </div>
+            <div class="funct-text">
               <h3>Activities</h3>
-              Be active. Write to your visitors what you are experiencing during your stay. Share your story so others can learn from it.
-            </p>
-          </div>
-        </section>
-
-        <section class="col-md-4 funct-wrap">
-          <div class="funct-ico pull-left">
-            <img class="funct-img" src="img/mood-vb.png" alt="">
-          </div>
-          <div class="funct-text">
-            <p>
+              <p>
+                Be active. Write to your visitors what you are experiencing during your stay. Share your story so others can learn from it.
+              </p>
+            </div>
+          </section>
+        </div>
+        <div class="col-md-4">
+          <section class="funct-wrap">
+            <div class="funct-ico pull-left">
+              <img class="funct-img" src="img/mood-icon.png" alt="mood icon">
+            </div>
+            <div class="funct-text">
               <h3>Status</h3>
-              Having a bad day? Let your friends and family know. They can't help you if they don't know. Don't stop there,  
-            </p>
-          </div>
-        </section>
-
-        <section class="col-md-4 funct-wrap">
-          <div class="funct-ico pull-left">
-            <img class="funct-img" src="img/visitor-vb.png" alt="">
-          </div>
-          <div class="funct-text">
-            <p>
+              <p>
+                Having a bad day? Let your friends and family know. They can't help you if they don't know. Don't stop there,  
+              </p>
+            </div>
+          </section>
+        </div>
+        <div class="col-md-4">
+          <section class="funct-wrap">
+            <div class="funct-ico pull-left">
+              <img class="funct-img" src="img/visitor-icon.png" alt="visitor icon">
+            </div>
+            <div class="funct-text">
               <h3>Visitors</h3>
-              
-            </p>
-          </div>
-        </section>
+              <p>
+                Let people who haven't visited you yet see who has.  
+              </p>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   </div>
-
-  <?php include_once('includes/incl.footer.php'); ?>  
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<?php include_once('includes/incl.footer.php'); ?>
 </body>
 </html>

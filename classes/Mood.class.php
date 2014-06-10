@@ -73,7 +73,8 @@
 			$db = new Db();
 			$sql = "SELECT * FROM mood_tbl WHERE fk_user_id = '$uid'";
 			$result = $db->conn->query($sql);
-			return $result;
+			$data = $result->fetch_assoc();
+			return $data;
 		}
 	}
 	

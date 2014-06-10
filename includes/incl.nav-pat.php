@@ -11,7 +11,8 @@
 
 <nav class="nav-wrap clearfix">
     <div class="container">
-
+        <a href="#"><img src="img/Hospitality_logo_web.png" alt="hospitality logo"></a>
+        
         <ul class="navbar-right clearfix">
             <li><a href="mood.php">Mood</a></li>  
             <li><a href="activities.php">Activities</a></li>  

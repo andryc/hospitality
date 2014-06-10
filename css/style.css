@@ -1,6 +1,10 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 }
+
+h2{
+	margin: 0 0 20px;
+}
 /* custom nav css */
 .nav-wrap {
 	border-bottom: 2px solid #ff9376;
@@ -44,10 +48,32 @@ nav a#pull {
 	background-color: #6eb6a1;
 	height: 400px;
 	padding: 50px 0;
+	color: #FFF;
+}
+
+#cta-left {
+	font-size: 16px;
+	width: 400px;
+	margin-left: 100px;
+}
+
+#cta-left p span {
+	font-family: 'Open Sans Condensed';
+	font-size: 55px;
+	font-weight: 700;
+	display: block;
+	line-height: 1.1;
+	margin-bottom: 20px;
+}
+
+#cta-right {
+	margin-top: 50px;
+	margin-left: 50px;
 }
 
 #cta-right p {
 	color: #FFF;
+	font-size: 18px
 }
 
 .btn-cta {
@@ -83,6 +109,7 @@ a.btn-cta:hover {
 	min-height: 200px;
 	margin-right: 20px;
 	background-color: #edffeb;
+	padding: 15px;
 }
 
 #functions section.funct-wrap:last-child {
@@ -90,7 +117,7 @@ a.btn-cta:hover {
 }
 
 .funct-ico {
-	margin: 10px 10px 10px 0;
+	
 }
 
 .funct-img {
@@ -106,6 +133,11 @@ a.btn-cta:hover {
 	font-weight: 600;
 }
 
+div.funct-text p {
+	font-size: 16px;
+	line-height: 23px;
+}
+
 footer {
 	border-top: 2px solid #ff9376;
 	height: 70px;
@@ -116,9 +148,14 @@ footer p {
 	text-align: center;
 	line-height: 70px;
 }
+
 /* login/register css */
 .content-wrap {
 	padding: 50px 0;
+}
+
+.form-wrap {
+	width: 500px;
 }
 
 form p {
@@ -128,9 +165,46 @@ form p {
 textarea {
 	resize: none;
 }
+
+.btn-hosp {
+	width: 100%;
+	padding: 7px 25px; 
+	background: #ff9376;
+	color: #FFF; 
+	border: 0 none;
+}
+
+.btn-hosp-lil {
+	width: 100px;
+	padding: 7px 25px; 
+	background: #ff9376;
+	color: #FFF; 
+	border: 0 none;
+}
+
+.btn-hosp:hover, .btn-hosp-lil:hover {
+	background: -webkit-linear-gradient(#ffb19c, #ff9376);
+	background: -o-linear-gradient(#ffb19c, #ff9376);
+	background: -moz-linear-gradient(#ffb19c, #ff9376);
+	background: linear-gradient(#ffb19c, #ff9376);
+}
+
+a.under {
+	display: block;
+	margin-top: 20px;
+}
+
 /* mood css */
 .highlight {
 	color: #6eb6a1;
+}
+
+article.comment {
+	width: 500px;
+	padding: 7px 15px;
+	margin: 15px 0;
+	background-color: #edffeb;
+	border-bottom: 2px solid #ff9376;
 }
 
 /* Large Devices, Wide Screens */
@@ -161,7 +235,7 @@ textarea {
         text-align: left;  
         width: 100%;  
         text-indent: 25px;  
-    }  
+    }
 }
 
 /* Small Devices, Tablets */
@@ -182,6 +256,34 @@ textarea {
 	nav li {
 		display: block;
 		text-align: center;
+	}
+
+	#cta {
+		height: auto;
+	}
+
+	#cta-left {
+		margin-left: 0px;
+		width: auto;
+	}
+
+	#cta-right {
+		margin-left: 0px;
+		width: auto;
+	}
+
+	#functions {
+		height: auto;
+	}
+
+	.funct-wrap {
+		margin: 0 0 20px 0;
+		width: auto;
+	}
+
+	.form-wrap {
+		width: auto;
+		padding: 15px;
 	}
 }
 

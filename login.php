@@ -41,20 +41,22 @@
 <?php include_once('includes/incl.nav.php'); ?>
 <div class="container">
 	<div class="content-wrap">
-		<h2>Login</h2>
-		<form role="form" method="post">
-			<?php if(isset($err_login)) echo "<p class='bg-danger'>$err_login</p>"; ?>
-	  		<div class="form-group">
-	    		<label for="email">Email</label>
-	    		<input type="email" class="form-control" id="email" name="email" placeholder="you@hospitality.com">
-	  		</div>
-	  		<div class="form-group">
-	    		<label for="pass">Password</label>
-	    		<input type="password" class="form-control" id="pass" name="pass" placeholder="Password">
-	  		</div>
-	  		<input type="submit" class="btn btn-default" name="login-btn" value="Login" />
-		</form>
-		<a href="register.php">Not a member yet?</a>
+		<div class="form-wrap center-block">
+			<h2>Login</h2>
+			<form role="form" method="post">
+				<?php if(isset($err_login)) echo "<p class='bg-danger'>$err_login</p>"; ?>
+		  		<div class="form-group">
+		    		<label for="email">Email</label>
+		    		<input type="email" class="form-control" id="email" name="email" placeholder="you@hospitality.com">
+		  		</div>
+		  		<div class="form-group">
+		    		<label for="pass">Password</label>
+		    		<input type="password" class="form-control" id="pass" name="pass" placeholder="Password">
+		  		</div>
+		  		<input type="submit" class="btn-hosp" name="login-btn" value="Login" />
+			</form>
+			<a class="under" href="register.php">Not a member yet?</a>
+		</div>
 	</div>
 </div>
 <?php include_once('includes/incl.footer.php'); ?>
