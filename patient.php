@@ -4,20 +4,24 @@
 	include_once('classes/Mood.class.php');
 	include_once('classes/Activity.class.php');
 	include_once('classes/Comment.class.php');
+	include_once('classes/Visit.class.php');
 
 	if (isset($_GET['patient_id'])) {
 		$uid = $_GET['patient_id'];
 		$u = new User();
 		$m = new Mood();
 		$a = new Activity();
+		$c = new Comment();
+		$v = new Visit();
+
 		$user = $u->GetUserInfo($uid);
-		$mood = $m->GetMood($uid);
+		$data = $m->GetMood($uid);
+		$mood = $data->fetch_assoc();
 		$activity = $a->GetLatestActivity($uid);
 		$aid = $activity['activity_id'];
-
-		$c = new Comment();
+		$date = date('F j, Y, G:i');
+		
 		if (isset($_POST['comment-btn'])) {
-			$date = date('F j, Y, G:i');
 			$c->Commenter = $_SESSION['name'];
 			$c->Date = $date;
 			$c->Comment = $_POST['comment'];
@@ -26,13 +30,22 @@
 			$c->UpdateCommentNumber($aid);
 		}	
 		$comments = $c->GetComments($aid);
+
+		if (isset($_POST['visit-btn'])) {
+			$v->FirstName = $_SESSION['firstname'];
+			$v->LastName = $_SESSION['lastname'];
+			$v->Date = $date;
+			$v->Status = "pending";
+			$v->CheckIn($uid);
+		}
+		
 	}
 
 ?><!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><?php echo $user['user_name'] ." ". $user['user_surname']; ?> | Hospitality</title>
+	<title><?php echo $user['user_firstname'] ." ". $user['user_lastname']; ?> | Hospitality</title>
 	<?php include_once('includes/incl.head.php'); ?>
 </head>
 <body>
@@ -41,7 +54,7 @@
 	<div class="content-wrap">
 		<div class="row">
 			<div class="col-md-6">
-				<h3><?php echo $user['user_name'] ." ". $user['user_surname']; ?></h3>
+				<h3><?php echo $user['user_firstname'] ." ". $user['user_lastname']; ?></h3>
 				<p>
 					<br>
 					Condition: <?php echo $user['user_condition']; ?>
@@ -80,9 +93,13 @@
 				</form>
 			</div>
 			<div class="col-md-6">
-				<button class="btn-hosp-lil">Visit</button>
+				<form role="form" method="post">
+					<div class="form-wrap">
+						<input type="submit" class="btn-hosp-lil" name="visit-btn" value="Visit">
+					</div>
+				</form>
 				<h3>Visited this week</h3>
-				<li>Bo Terham</li>
+				
 			</div>
 		</div>
 	</div>

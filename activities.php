@@ -30,7 +30,7 @@
 <?php include_once('includes/incl.nav-pat.php'); ?>
 <div class="container">
 	<div class="content-wrap">
-		<div class="form-wrap center-block">
+		<div class="form-wrap">
 			<h2>Add an Activity</h2>
 			<form role="form" method="post">
 				<div class="form-group">

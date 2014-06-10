@@ -42,7 +42,39 @@ nav li a.active {
 
 nav a#pull {  
     display: none;  
-}     
+}
+
+li a.single-link {
+	padding-right: 0; 
+}
+
+.space {
+	margin: 0 5px;
+	display: inline-block;
+}
+
+.btn-menu {
+	display: inline;
+    background-color: #ff9376;
+    color: #FFF;
+    text-align: center;
+}
+
+a.btn-menu {
+	padding: 5px 10px;
+	text-decoration: none;
+	line-height: 40px;
+}
+
+a.btn-menu:hover {
+	color: #FFF;
+	
+    background: -webkit-linear-gradient(#ffb19c, #ff9376);
+	background: -o-linear-gradient(#ffb19c, #ff9376);
+	background: -moz-linear-gradient(#ffb19c, #ff9376);
+	background: linear-gradient(#ffb19c, #ff9376);
+}
+
 /* home css */
 #cta {
 	background-color: #6eb6a1;
@@ -140,13 +172,19 @@ div.funct-text p {
 
 footer {
 	border-top: 2px solid #ff9376;
+	width: 100%;
 	height: 70px;
 	bottom: 0;
+	background-color: #FFF;
 }
 
 footer p {
 	text-align: center;
 	line-height: 70px;
+}
+
+footer.bottom {
+	position: fixed;
 }
 
 /* login/register css */

@@ -17,8 +17,8 @@
 			session_start();
 			$_SESSION['email'] = $u->Email;
 			$_SESSION['id'] = $uid;
-			$_SESSION['name'] = $userInfo['user_name'];
-			$_SESSION['surname'] = $userInfo['user_surname'];
+			$_SESSION['firstname'] = $userInfo['user_firstname'];
+			$_SESSION['lastname'] = $userInfo['user_lastname'];
 			
 			if ($u->Login() == true) {
 				$_SESSION['patient'] = "true";

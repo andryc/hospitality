@@ -31,7 +31,7 @@
 	    </div>
 	    <ul id="namelist" class="list-group">
 	    <?php  if(isset($_POST['search-btn']))foreach ($names as $name) { ?>
-	    	<li><a href=""><?php echo $name['user_name'] ?></a></li>
+	    	<li class="list-group-item"><a href=""><?php echo $name['user_name'] ?></a></li>
 	   	<?php } ?>
 	   	</ul>
 	   	<p id="feedback"></p>

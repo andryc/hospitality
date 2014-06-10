@@ -204,8 +204,8 @@
 			$db = new Db();
 			if($name != "") {
 				$sql = "select * from user_tbl where  
-						user_name like '%".$db->conn->real_escape_string($name)."%' and user_patient = 'true'
-						or user_surname like '%".$db->conn->real_escape_string($name)."%'
+						user_firstname like '%".$db->conn->real_escape_string($name)."%' and user_patient = 'true'
+						or user_lastname like '%".$db->conn->real_escape_string($name)."%'
 						and user_patient = 'true';";
 				$result = $db->conn->query($sql);
 				$result_array = array();
@@ -214,7 +214,7 @@
 					$result_array[] = $row;
 				}
 
-				return($result_array);
+				return $result_array;
 			} else {
 				return false;
 			}

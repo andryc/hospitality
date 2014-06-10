@@ -2,7 +2,7 @@
 	session_start();
 	if ($_SESSION['patient'] == "true") {
 		include_once('classes/Mood.class.php');
-		$u_name = $_SESSION['name'];
+		$u_name = $_SESSION['firstname'];
 		$uid = $_SESSION['id'];
 		$m = new Mood();
 		if (isset($_POST['mood-btn'])) {

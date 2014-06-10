@@ -44,8 +44,8 @@
 			session_start();
 
 			$_SESSION['email'] = $u->Email;
-			$_SESSION['name'] = $u->FirstName;
-			$_SESSION['surname'] = $u->LastName;
+			$_SESSION['firstname'] = $u->FirstName;
+			$_SESSION['lastname'] = $u->LastName;
 			$_SESSION['patient'] = $u->CheckPatient;
 			$_SESSION['id'] = $uid;
 			if ($_SESSION['patient'] == "true") {

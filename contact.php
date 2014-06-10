@@ -35,7 +35,7 @@
 <?php include_once('includes/incl.nav.php') ?>
 <div class="container">
 	<div class="content-wrap">
-		<div class="form-wrap center-block">
+		<div class="form-wrap">
 			<h2>Got a question?</h2>
 			<form role="form" method="post">
 				<?php if(isset($feedback)) echo "<p class='bg-success'>$feedback</p>"; ?>
